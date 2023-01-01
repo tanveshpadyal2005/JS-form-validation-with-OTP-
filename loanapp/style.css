@@ -1,0 +1,427 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* outline: 1px solid red; */
+}
+
+.bg-img {
+    min-height: 100vh;
+    width: 100%;
+    /* background-color: rgb(8, 13, 56); */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-image:linear-gradient( to top right,rgba(7, 7, 60),rgb(46, 4, 4));
+    background-size: cover;
+    gap: 10px;
+    padding: 2rem 0;
+
+}
+
+.bg-img h1{
+    color: #fff;
+}
+
+.ver {
+    width: 24rem;
+    background-color: azure;
+    padding: 10px 50px 50px 50px;
+    background-color: #FFF;
+    backdrop-filter: blur(2px);
+    background-size: cover;
+    border-radius: 15px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.4);
+    border-top: 5px solid rgb(0, 217, 255);
+    border-left: 1px solid rgb(0, 217, 255);
+
+}
+
+.form-img img {
+    width: 80px;
+}
+
+.ver form {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    line-height: 25px;
+    text-transform: capitalize;
+}
+
+.ver form input {
+    /* width: 15rem; */
+    height: 2.6rem;
+    border: none;
+    border-radius: 5px;
+    padding: 0 10px;
+    font-size: 14px;
+    font-weight: 500;
+    background-color: rgba(134, 134, 134, 0.3);
+    /* box-shadow: 4px 4px 2px rgba(0, 0, 0, 0.243); */
+    border-right: 3px solid rgb(31, 244, 134);
+}
+
+#result,#result2,#result3{
+    color: rgb(0, 0, 255) !important;
+}
+
+#emi-btn{
+    width: 7rem !important;
+    box-shadow: none;
+    background-color: rgb(151, 255, 151);
+    cursor: pointer;
+    height: 2.3rem;
+    border: none !important;
+}
+
+#emi-btn:hover{
+    background-color: rgb(85, 255, 85);
+}
+
+.form-btn{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+  justify-content: space-between;
+  
+}
+
+.btn2{
+    /* margin: 0; */
+    margin-top: 20px;
+    box-shadow: none !important;
+    background-color: rgba(255, 0, 0, 0.601) !important;
+    color: #FFF;
+    padding: 5px 10px !important;
+    transition: 0.3s ;
+    border: none !important; 
+}
+
+.btn2:hover{
+    background-color: red !important;
+}
+
+.sub {
+    margin-top: 20px;
+    width: 8rem !important;
+    background-color: rgb(8, 8, 56) !important;
+    color: white;
+    font-weight: 600;
+    font-size: 20px;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    box-shadow: none !important;
+    border: none !important;
+}
+
+.sub:hover {
+    background-color: rgb(0, 219, 248) !important;
+    color: black;
+}
+
+form label {
+    color: rgb(0, 217, 255);
+    text-transform: capitalize;
+    font-weight: 600;
+    margin-top: 15px;
+}
+
+.ver h2 {
+    margin-bottom: 10px;
+    color: rgb(24, 216, 155);
+}
+
+.ver .para p {
+    color: rgb(8, 8, 56) !important;
+    font-weight: 500;
+}
+
+input:focus {
+    outline: 1px solid gray;
+}
+
+#estimate,#estimate2,#estimate3{
+    font-weight: 500 ;
+    padding-top: 10px;
+}
+
+/* make website responsive */
+
+@media (max-width:400px) {
+    .ver{
+        padding: 6px 30px 30px 30px;
+        width: 20rem;
+    }
+}
+
+@media (max-width:380px) {
+    .ver{
+        padding: 6px 20px 20px 20px;
+        width: 18rem;
+    }
+   
+}
+
+@media (max-width:350px) {
+    .ver{
+        padding: 6px 15px 15px 15px;
+        width: 16rem;
+    }
+
+    .
+    /* .ver form input {
+        width: 14rem;
+        height: 2.4rem;
+    } */
+}
+
+
+/* second html file Css */
+body {
+    background-color: #252525;
+}
+
+.new-bg {
+    min-height: 100vh;
+    width: 100%;
+    background-color: aquamarine;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(./alex-shutin-kKvQJ6rK6S4-unsplash.jpg);
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.new-form {
+    background-color: rgb(255, 255, 255);
+    height: 35rem;
+    padding: 10px 10px 10px 40px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    width: 20rem;
+    background-image: url(./pexels-miguel-á-padriñán-19670.jpg);
+    background-size: cover;
+    position: relative;
+}
+
+
+.resend{
+    position: absolute;
+    bottom: 5px;
+    line-height: 10px !important;
+    left: 95px;
+}
+
+.resend p{
+    font-size: 13px !important;
+    text-align: center;
+}
+
+.resend p:nth-child(2){
+    color: rgb(0, 183, 255);
+    font-weight: 700;
+    font-size: 14px !important;
+}
+
+.new-form img {
+    width: 75px;
+    margin-bottom: 15px;
+    border-bottom: 2px solid gray;
+    padding-bottom: 10px;
+}
+
+.new-bg h2 {
+    color: rgb(29, 228, 172);
+    margin-bottom: 15px;
+}
+
+.new-cont  #imgbx {
+    width: 20px;
+    margin: 0;
+    border: none;
+}
+
+.new-cont {
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.new-bg form input {
+    width: 15rem;
+    height: 2.6rem;
+    border: none;
+    border-radius: 5px;
+    padding: 0 10px;
+    font-size: 15px;
+    font-weight: 500;
+    background-color: rgba(134, 134, 134, 0.5);
+}
+
+
+
+.sub1 {
+    margin-top: 20px;
+    width: 8rem !important;
+    background-color: rgb(8, 8, 56) !important;
+    color: white;
+    font-weight: 600;
+    font-size: 20px;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+}
+
+.sub1:hover {
+    background-color: rgb(0, 219, 248) !important;
+    color: black;
+}
+
+.new-bg p {
+    margin-bottom: 10px;
+    font-size: 15px;
+    font-weight: 500;
+    color: rgb(57, 57, 57);
+}
+
+.new-btn {
+    width: 20rem;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.new-btn button {
+    width: 6rem;
+    height: 2.5rem;
+    background-color: rgb(255, 51, 51);
+    border: none;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 500;
+    border-radius: 5px;
+    margin-top: 20px;
+    transition: all 0.2s ease;
+}
+
+.new-btn button:hover {
+    background-color: red;
+}
+
+
+#verify {
+    width: 40px;
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+
+
+.checkbx {
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    background-color: rgb(247, 255, 184);
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin-top: 5px;
+    position: fixed;
+    animation: fill 0.8s linear !important;
+    height: 15rem !important;
+    top: 200px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.564);
+    width: 15rem;
+    
+}
+
+.checkbx span {
+    font-weight: 700;
+    color: rgb(0, 0, 0);
+}
+
+.checkbx2 {
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    background-color: rgb(131, 177, 255);
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin-top: 5px;
+    animation: fill2 0.5s ease !important;
+    
+   
+}
+
+.checkbx2 span {
+    font-weight: 700;
+    color: rgb(0, 0, 0);
+}
+
+@keyframes fill {
+    from {
+        
+        /* margin-top: -4rem; */
+        background-color: gold;
+        transform: scale(0);
+    }
+
+    to {
+        margin-top: 0rem !important;
+        /* width: inherit; */
+        transform: scale(1.4);
+    }
+}
+
+@keyframes fill2 {
+    0% {
+        margin-top: -2rem;
+        background-color: gold;
+    }
+
+    50%{
+        margin-top:2rem ;
+    }
+
+    100% {
+        margin-top: 1rem !important;
+        width: inherit;
+    }
+}
+
+#para01{
+    font-size: 13px;
+    font-weight: 400 !important;
+}
+
+
+#para01 p span{
+    text-transform: capitalize;
+    color:rgb(0, 58, 216) ;
+    font-weight: 500 !important;
+    font-size: 15px !important;
+
+}
+
+/* media queries */
+
+@media (max-width:420px) {
+    .new-form {
+        width: 18rem;
+        padding: 10px 10px 10px 25px;
+    }
+    .new-btn  {
+        width: auto;
+    }
+
+
+}
+

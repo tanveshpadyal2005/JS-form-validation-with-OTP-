@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div class="bg-img">
+        <h1>Loan App....</h1>
+        <div class="ver">
+            <h2>Bank loan Application Form</h2>
+            <div class="form-img">
+                <img src="./contact-form.png" alt="img">
+            </div>
+            <div class="para">
+                <p>*Please enter your valid information*</p>
+            </div>
+            <form action="./new.html" onsubmit="handleform()">
+                <label for="fname" style="margin-top: 5px;">Name:</label>
+                <input type="text" name="fname" id="fname" placeholder="Enter full name"
+                    pattern="[a-zA-Z]{2,}[ ][a-zA-Z ]{2,}" title="Format should be like: 'abc xyz'" required>
+
+                <label for="email">Email:</label>
+                <input type="email" name="email" id="email" placeholder="eg.xyz@gmail,com"
+                    pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" title="Format should be like: 'abcd@xyz.com'"
+                    required>
+
+                <label for="pan">Pancard:</label>
+                <input type="text" name="pan" id="pan" placeholder="Enter pancard No." maxlength="10"
+                    pattern="[a-zA-Z][a-zA-Z][a-zA-Z][a-zA-Z][a-zA-Z][0-9][0-9][0-9][0-9][a-zA-Z]"
+                    title="Format should be like: 'ABCDE1234F'" required>
+
+                <label for="amt">Amount(Rs.):</label>
+                <input type="text" name="amt" id="amt" placeholder="Enter Ammount" maxlength="9" pattern="^[0-9]*$"
+                    required>
+
+                <label>Loan Duration(Year) :</label>
+                <input type="number" class="input" id="year" maxlength="2" pattern="^[0-9]*$"
+                    title="Format should be like: '1-99'" placeholder="Year for EMI" required>
+
+                <br>
+                <input type="button" id="emi-btn" onclick="total_emi()" value="Calculate EMI">
+                
+                <p id="estimate2">EMI: <span id="result2"></span></p>
+                <p id="estimate">Total-emi : <span id="result"></span></p>
+                <p id="estimate3">Total Amount : <span id="result3"></span></p>
+                <div class="form-btn">
+                    <input type="submit" value="submit" class="sub">
+                    <input type="reset" class="btn2" onclick="clr()">
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+
+    <script>
+
+
+
+
+        function total_emi() {
+            const rate = 0.5;
+            const amt = parseInt(document.getElementById('amt').value);
+            const year = parseInt(document.getElementById('year').value);
+            const per_month = parseInt((year*12))
+
+            // SI= P X RX T/100
+
+            const emi = parseInt((amt*rate/100*year)+(amt/12))
+            const em_price = parseInt((amt*rate/100*year))
+            const total_amt = parseInt(emi*per_month);
+            /*10000 = 10000 / 12 * 0.5*/
+
+            // const month = parseInt(year * 12);
+
+            // const emi = parseInt(((amt) + (amt * rate * year)) / month);
+
+            document.getElementById('result3').innerHTML = "Rs." + " " + total_amt;
+            document.getElementById('result2').innerHTML = "Rs." + " " + em_price;
+            document.getElementById('result').innerHTML = "Rs." + " " + emi + " " + "/month";
+        }
+
+        function clr() {
+            document.getElementById('result').innerHTML = " ";
+            document.getElementById('result2').innerHTML = " ";
+            document.getElementById('result3').innerHTML = " ";
+        }
+
+
+
+        function handleform() {
+
+            const Fname = document.getElementById("fname").value;
+            const Email = document.getElementById("email").value;
+            const Pan = document.getElementById("pan").value;
+            const Amount = document.getElementById("amt").value;
+            const OTP = Math.round(Math.random() * 10000);
+
+
+
+
+            sessionStorage.setItem('fname', Fname);
+            sessionStorage.setItem("Email", Email);
+            sessionStorage.setItem("pancard", Pan);
+            sessionStorage.setItem("Amount", Amount);
+            // sessionStorage.setItem("OTP",OTP);
+
+
+        }
+
+    </script>
+</body>
+
+</html>

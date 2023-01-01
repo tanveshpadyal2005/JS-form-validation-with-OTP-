@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body id="change">
+    <div class="new-bg">
+        <div class="new-form">
+            <div class="new-cont">
+                <h2>OTP Verification </h2><img src="./next.png" id="imgbx" alt="">
+            </div>
+            <img src="./pin.png" alt="">
+            <p id="para01"></p>
+            <form action="" onsubmit="newform()">
+                <input type="text" name="Nname" id="Nname" placeholder="Enter OTP" maxlength="4">
+                <input type="submit" value="verify OTP" id="hide" class="sub1">
+            </form>
+            <div class="new-btn">
+                <a href="./index.html"><button  >Back</button></a>
+            </div>
+
+            <div id="right-wrong">
+
+            </div>
+
+            <div class="resend">
+                <p>Do you Forgot OTP?</p>
+                <p onclick="resendotp()" style="cursor: pointer;">Resend OTP</p>
+            </div>
+
+
+        </div>
+    </div>
+    <script>
+
+        const newname = sessionStorage.getItem('fname');
+        const newemail = sessionStorage.getItem("Email");
+
+        document.getElementById("para01").innerHTML = `
+       <p>Dear <span> ${newname}</span>,<br/>
+        A  verification code has been sent to your Email : <span>${newemail}</span> ,<br/>
+        Please enter it in the following box and verify for confirmation :)
+       </p>
+       `
+
+      
+           
+       
+
+        function newform() {
+            event.preventDefault();
+            const Nname = document.getElementById("Nname").value;
+
+
+
+            if (Nname == OTP) {
+                document.getElementById("hide").style.display = "none";
+                document.getElementById("right-wrong").innerHTML = `
+                <div class="checkbx">
+                    <img src="./check.png" alt="" id="verify"><span>Verification succesfull</span>
+                </div>
+                `
+
+            }
+
+            else {
+                document.getElementById("right-wrong").innerHTML = `
+                <div class="checkbx2">
+                    <img src="./cancel.png" alt="" id="verify"><span>Please enter valid otp</span>
+                </div>
+                `
+            }
+        }
+
+        function resendotp() {
+            alert("Enter this OTP:"+""+ OTP);
+        }
+
+        const OTP =parseInt(Math.round(Math.random() * 10000)) ;
+        alert("Enter this OTP:"+""+OTP);
+
+    </script>
+</body>
+
+</html>
